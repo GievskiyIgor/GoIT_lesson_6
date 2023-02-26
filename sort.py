@@ -110,7 +110,8 @@ def sort(path):
             
             if path_fd.suffix[1:] in dict_sort['archives']:
                 # try:
-                   readr =  shutil.unpack_archive(path_fd, path_folder_arhiv)
+                #    readr =  shutil.unpack_archive(path_fd, path_folder_arhiv)
+                shutil.unpack_archive(path_fd, path_folder_arhiv)
                 # except path_fd.ReadError as re:
                     # print (re)
                     
