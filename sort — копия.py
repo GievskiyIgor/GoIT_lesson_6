@@ -61,6 +61,71 @@ def end_sort(path_ff):
                 #     os.removedirs(path_fd) 
                 # except:
                 #     end_sort(path_fd)
+                                  
+# 1 варинат
+# def dict_sort_file(path_fd, name_arhiv):
+      
+#     for key, val in dict_sort.items():
+#         if path_fd.suffix[1:] in val:
+#             if key == 'archives':
+#                 #  адресс для папки распаковки
+#                 dst = []
+#                 str_dst_folder = f'{path_ff}\\{key}\\{name_arhiv}'
+#                 dst.append(pathlib.Path(str_dst_folder))
+#                 dst.append(pathlib.Path(f'{path_ff}\\{key}'))
+#                 if not os.path.exists(str_dst_folder):
+#                     pathlib.Path.mkdir(dst[0])
+                
+#             else:
+#                 dst = pathlib.Path(f'{path_ff}\\{key}')
+#             return dst 
+        
+
+# def sort(path):
+    
+#     # 2 итерация
+#     # по папкам и файлам и сортировка их по папкам
+#     for path_fd in path.iterdir():
+#         if path_fd.is_dir():
+#             if path_fd.name not in list_folder:
+#                 sort(path_fd)
+#         else:
+#             suffix_ = path_fd.suffix
+#             name_file = normalizate_(path_fd.name)
+#             dst = dict_sort_file(path_fd, name_file)
+#             name_file = name_file + suffix_
+                        
+#             if dst !=None:
+#                 if suffix_[1:] in dict_sort['archives']:
+#                     shutil.unpack_archive(path_fd, dst[0])
+#                     dst = pathlib.Path.joinpath(dst[1], name_file)
+#                     pathlib.Path.replace(path_fd, dst)
+#                 else: 
+#                     dst = pathlib.Path.joinpath(dst, name_file)
+#                     pathlib.Path.replace(path_fd, dst)
+#             else:    
+#                 # if path_fd.parent != path_ff:
+#                     dst = pathlib.Path.joinpath(path_ff, name_file)
+#                     pathlib.Path.replace(path_fd, dst)
+
+# 2 Вариант_исправления
+# def naime_folder_arhiv(path_ff, key, name_file):
+    
+#     global path_folder_arhiv
+    
+#     path_folder_arhiv = pathlib.Path(f'{path_ff}\\{key}\\{name_file}')
+    
+#     if not os.path.exists(path_folder_arhiv):
+#         pathlib.Path.mkdir(path_folder_arhiv)
+#     # else:
+#     # # если в папке архив есть такая уже папка
+#     #     name_file = name_file + random.choice(name_file)
+#     #     path_folder_arhiv = pathlib.Path(f'{path_ff}\\{key}\\{name_file}')
+#     #     if not os.path.exists(path_folder_arhiv):
+#     #         pathlib.Path.mkdir(path_folder_arhiv)
+    
+#     return path_folder_arhiv
+    
 
 def dict_sort_file(path_fd, name_file):
     
