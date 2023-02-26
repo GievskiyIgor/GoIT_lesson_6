@@ -137,13 +137,13 @@ def star(path):
         
     sort(path_ff)
 
-# if __name__ == "__main__":
-#     if len(sys.argv) > 1:
-#         star(sys.argv[1])
-#         end_sort(path_ff)
+if __name__ == "__main__":
+    if len(sys.argv) > 1:
+        star(sys.argv[1])
+        end_sort(path_ff)
 
         
-path = 'E:\LessonsPython\GoIT_lesson_6\хлам'
-star(path)
-end_sort(path_ff)
+# path = 'E:\LessonsPython\GoIT_lesson_6\хлам'
+# star(path)
+# end_sort(path_ff)
 
